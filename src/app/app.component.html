@@ -1,0 +1,32 @@
+<div style="text-align:center">
+  <h1>
+    {{title}}
+  </h1>
+  
+</div>
+<div class="container">
+  <div class="api-details-form">
+      <form>
+        <div class="form-group">
+          <label for="api_url">API Url</label>
+          <input type="text" class="form-control" id="api_url" [(ngModel)]="apiUrl"  name="url" placeholder="Enter url">
+        </div>
+        <div class="form-group">
+          <label for="api_token">Token</label>
+          <input type="text" class="form-control" id="token" [(ngModel)]="token" name="token" placeholder="Bearer Token">
+        </div>
+        <div class="form-group">
+          <label for="query_params">Query Params</label>
+          <input type="text" class="form-control" id="query_params" [(ngModel)]="queryParams" name="params" placeholder="query params">
+        </div>
+        <button type="button" (click)="getApiResult()" class="btn btn-block btn-warning">Submit</button>
+      </form>
+  </div>
+
+  <div class="api-result">
+      <textarea class="form-control" rows="10">
+        {{apiResult}}
+      </textarea>
+  </div>
+</div>
+
